@@ -1,0 +1,150 @@
+* {     /*paramètres globaux*/
+    overflow: auto;     /*permet de gérer le débordement*/
+}
+
+body {
+    background-color: #8BA1BB;  /*couleur de l'arrière-plan*/
+    font-family: Arial, Helvetica, sans-serif;  /*choix de la police*/
+    margin: 0;  /*supprime les marges*/
+}
+
+.centre {   /*classe commune pour centrer les élements*/
+    text-align: center; /*centre le texte*/
+    width: 100%; /*pour que les images occupent tout l'espace*/
+}
+
+div.category {  /*conteneur de "Recette"*/
+    margin-bottom: 0;   /*supprime la marge bas*/
+    margin-top: 0;      /*supprime la marge haut*/
+    overflow: visible;
+}
+
+p.category {    /*paragraphe de "Recette"*/
+    background-color: black;    /*couleur de l'arrière-plan*/
+    color: white;         /*couleur de la police*/
+    display: inline-block;  /*inline : permet de d'empieter sur un autre élement // block : retour à la ligne*/
+    padding: 8px 18px;      /*marges entre le texte et la bordure de l'arrière-plan (vertical/horizontal)*/
+    margin-top: -15px;          /*marge négative pour faire ressortir vers le haut la vignette "recette"*/
+    margin-bottom: 0;       /*supprime la marge en bas*/
+    font-weight: bold;      /*texte en gras*/
+    font-size: 16px;        /*taille de la police*/
+}
+
+h1 {
+    text-align: center;     /*centre le texte*/
+    margin-bottom: 12px;    /*marge du bas*/
+    margin-top: 10px;       /*marge du haut*/
+}
+
+div.contenu {   /*conteneur global*/
+    background-color: white;    /*couleur de l'arrière-plan*/
+    margin: 60px 10% 80px 10%;       /*marge haut/droite/bas/gauche*/
+    padding: 0 30px 30px 30px;       /*padding haut/droite/bas/gauche*/
+    min-width: 350px;             /*largeur minimale du conteneur*/
+    box-shadow: 0 0 40px 10px rgba(0, 0, 0, 0.591);  /*ajoute une ombre autour du conteneur (décalage x/décalage y/flou/étalement/couleur)*/
+    overflow: visible;
+}
+
+div.separateur {    /*conteneur permettant d'afficher une barre*/
+    background-color: black;    /*couleur de l'arrière-plan*/
+    height: 1px;                  /*hauteur*/
+    width: 300px;                 /*largeur*/
+    margin-left: auto;            /*permet d'occuper l'espace*/
+    margin-right: auto;           /*combiner au paramètre précédent, permet de centrer le contenu*/
+}
+
+p.description {
+    max-width: 400px;       /*largeur maximale du paragraphe*/
+    display: inline-block;  /*inline : permet de d'empieter sur un autre élement // block : retour à la ligne*/
+    font-size: 14px;        /*taille de la police*/
+}
+
+div.info {
+    position: relative; /*rend le positionnement relatif (n'impacte plus la position des autres élements au dehors du conteneur)*/
+}
+
+img.gateau {
+    display: block;     /*corrige le débord entre l'image et la table*/
+    max-height: 400px;  /*limite la hauteur de l'image*/
+    object-fit: cover;  /*empêche la déformation de l'image*/
+    min-height: 200px;  /*améliore la visibilité le temps que l'image charge*/
+    background-color: lightgray;    /*donne une couleur à la zone de chargement de l'image*/
+}
+
+table.info {
+    position: absolute; /*permet de positionner l'élement au dessus du reste du conteneur*/
+    bottom: 0;          /*alligne le tableau en bas du conteneur*/
+    width: 100%;        /*permet au tableau d'occuper toute la largeur du conteneur*/
+    color: white;     /*couleur de la police*/
+    background-color: #6C829DC0; /*couleur de l'arrière-plan*/
+    height: 80px;       /*hauteur du tableau*/
+}
+
+table.info th { /*style des headers du tableau*/
+    font-size: 16px;        /*taille de la police*/
+    vertical-align: bottom; /*alignement vertical en bas*/
+    padding-bottom: 8px;    /*padding bas*/
+}
+
+table.info td { /*style des données du tableau*/
+    text-align: center;     /*centre le texte*/
+    font-size: 14px;        /*taille de la police*/
+    vertical-align: top;    /*alignement vertical en haut*/
+}
+
+div.colonne {    /*paramètres communs aux deux colonnes*/
+    width: 45%; /*largeur des colonnes*/
+    margin-top: 20px;   /*ajoute un espace exterieur en haut des colonnes*/
+}
+
+div.colonne h2 {    /*paramètres des h2 dans la div colonne*/
+    text-align: center; /*centre le texte*/
+    text-transform: uppercase;  /*transforme le texte en majuscule*/
+    font-size: 15px;    /*taille de la police*/
+    border-bottom: 5px solid #6C829D;   /*ajoute une ligne en dessous des h2 (épaisseur/continue/couleur)*/
+    padding-bottom: 5px;    /*ajoute un espace entre les h2 et le border*/
+}
+
+div.colonne1 {  /*paramètres colonne 1*/ 
+    display: inline-block;  /*permet à la colonne 1 de partager son espace avec la colonne 2*/
+}
+
+div.ingredients p { /*paramètres des paragraphes dans la colonne des ingrédients*/
+    border: 1px solid lightgray;    /*ajoute une bordure autour de chaque paragraphe (épaisseur/continue/couleur)*/
+    padding: 8px 0;                   /*ajoute de l'espace interne (vertical/horizontal)*/
+    text-align: center;               /*centre le texte*/
+    margin: 8px;                      /*ajoute de l'espace externe*/
+    font-size: 14px;                  /*taille de la police*/
+}
+
+div.colonne2 {  /*paramètres colonne 2*/
+    float: right;   /*place la colonne 2 à droite*/
+}
+
+table.preparation p.numero {    /*paramètres des paragraphes de classe "numero" dans le tableau préparation*/
+    background-color: #6C829D;    /*couleur de l'arrière-plan*/
+    color: white;                 /*couleur du contenu*/
+    width: 25px;                    /*largeur*/
+    height: 25px;                   /*hauteur*/
+    text-align: center;             /*centre le texte*/
+    font-size: 14px;                /*taille de la police*/
+    font-weight: bold;              /*caractères gras*/
+    padding-top: 4px;               /*ajoute de l'espace interne en haut de chaque élement*/
+    box-sizing: border-box;         /*rend le padding et les paramètres de hauteur/largeur indépendants*/
+    border-radius: 50%;             /*pour arrondir le conteneur*/
+    margin: 0;                      /*supprime les espaces externes*/
+}
+
+table.preparation td {      /*paramètres des données dans le tableau préparation*/
+    vertical-align: top;    /*aligne le contenu verticalement vers le haut*/
+}
+
+table.preparation td.etapes {   /*paramètres des lignes de classe "etapes" dans le tableau preparation*/
+    font-size: 14px;        /*taille de la police*/
+    padding-left: 10px;     /*ajout d'un espace interne à gauche*/
+    padding-bottom: 10px;   /*ajout d'un espace interne en bas*/
+}
+
+table.preparation tr {      /*paramètres des lignes dans le tableau préparation*/
+    height: 40px;   /*définit la hauteur (minimale)*/
+}
